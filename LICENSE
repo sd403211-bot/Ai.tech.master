@@ -145,3 +145,126 @@
                         <span class="text-xs font-semibold text-slate-300"><i class="fa-solid fa-bolt text-amber-500 mr-2"></i> Turbo Token Boost</span>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" checked class="sr-only peer">
+    <!-- ========================================================= -->
+    <!-- SECTION 6: AGENT SWARM ORCHESTRATION ENGINE (PART 2)     -->
+    <!-- ========================================================= -->
+    <section id="agent-swarm" class="max-w-[1700px] mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- LEFT MODULE: LIVE CHATBOT SIMULATION INTERFACE -->
+            <div class="lg:col-span-1 bg-cyberDeep border border-slate-800 rounded-3xl p-6 flex flex-col justify-between h-[650px] shadow-xl">
+                <div>
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 rounded-full bg-neonCyan animate-ping"></div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white tracking-wide">Dynamic Prompt Sandbox</h4>
+                                <p class="text-[10px] text-slate-500 font-mono">Channel: #matrix-stream-01</p>
+                            </div>
+                        </div>
+                        <button class="text-slate-500 hover:text-white transition text-xs"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    </div>
+
+                    <!-- Chat Message Area -->
+                    <div class="space-y-4 max-h-[450px] overflow-y-auto custom-scrollbar pr-2 font-mono text-xs">
+                        <div class="bg-slate-900/60 p-3 rounded-2xl border border-slate-800 max-w-[85%]">
+                            <span class="text-neonPurple font-bold block mb-1">[SYSTEM INITIALIZER]:</span>
+                            System prompt parsed perfectly. Ready to deploy context nodes over inference frameworks.
+                        </div>
+                        <div class="bg-cyberDark p-3 rounded-2xl border border-slate-800/50 max-w-[85%] ml-auto text-right">
+                            <span class="text-neonCyan font-bold block mb-1">[DEVELOPER]:</span>
+                            Optimize vector chunks parameters for latency under 120ms.
+                        </div>
+                        <div class="bg-slate-900/60 p-3 rounded-2xl border border-slate-800 max-w-[85%]">
+                            <span class="text-neonGreen font-bold block mb-1">[AI ENGINE V5]:</span>
+                            Compiling embeddings configuration... Token throughput increased by <span class="text-neonGreen">42.8%</span>. Execution blueprint generated safely.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input System Component -->
+                <div class="pt-4 border-t border-slate-800/80">
+                    <div class="relative flex items-center">
+                        <input type="text" placeholder="Type prompt variable injections..." class="w-full bg-cyberDark border border-slate-700 rounded-2xl pl-4 pr-12 py-3.5 text-xs text-slate-300 focus:outline-none focus:border-neonCyan font-mono">
+                        <button class="absolute right-3 bg-neonCyan text-black p-2 rounded-xl text-xs hover:opacity-80 transition"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT MODULE: SWARM MATRIX NODES MONITOR (2 COLUMNS) -->
+            <div class="lg:col-span-2 bg-cyberDeep border border-slate-800 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
+                        <div>
+                            <h4 class="text-base font-bold text-white tracking-wide">Multi-Agent Swarm Registry Network</h4>
+                            <p class="text-xs text-slate-400">Autonomous processes handling continuous prompt verification layers.</p>
+                        </div>
+                        <!-- Operational Filters -->
+                        <div class="flex space-x-2 font-mono text-[10px]">
+                            <span class="bg-slate-900 border border-slate-700 px-3 py-1.5 rounded-lg text-slate-300 cursor-pointer hover:border-white">ALL AGENTS (14)</span>
+                            <span class="bg-neonGreen/10 border border-neonGreen/20 px-3 py-1.5 rounded-lg text-neonGreen cursor-pointer">ACTIVE SYSTEM (4)</span>
+                        </div>
+                    </div>
+
+                    <!-- Micro Clusters Grid Layout -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <!-- Agent Node 1 -->
+                        <div class="bg-cyberDark p-4 rounded-2xl border border-slate-800/80 flex items-start space-x-3.5 group hover:border-slate-700 transition">
+                            <div class="bg-neonPurple/10 border border-neonPurple/30 text-neonPurple p-3 rounded-xl"><i class="fa-solid fa-shield-cat text-base"></i></div>
+                            <div class="flex-1 font-mono text-xs">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-slate-200 font-bold font-sans">GuardrailAgent_01</span>
+                                    <span class="text-[9px] bg-neonGreen/10 text-neonGreen px-2 py-0.5 rounded-full">SECURE</span>
+                                </div>
+                                <p class="text-slate-500 text-[11px] mb-2">Scanning outputs for toxic vectors, formatting loops, and token leakage boundaries.</p>
+                                <div class="text-[10px] text-slate-400 flex justify-between"><span>Load Matrix:</span> <span class="text-white">12.4% CPU</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Agent Node 2 -->
+                        <div class="bg-cyberDark p-4 rounded-2xl border border-slate-800/80 flex items-start space-x-3.5 group hover:border-slate-700 transition">
+                            <div class="bg-neonCyan/10 border border-neonCyan/30 text-neonCyan p-3 rounded-xl"><i class="fa-solid fa-code-branch text-base"></i></div>
+                            <div class="flex-1 font-mono text-xs">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-slate-200 font-bold font-sans">RAG_Injector_Core</span>
+                                    <span class="text-[9px] bg-neonGreen/10 text-neonGreen px-2 py-0.5 rounded-full">CONNECTED</span>
+                                </div>
+                                <p class="text-slate-500 text-[11px] mb-2">Fetching contextual document snippets from vectorized cluster storage instances.</p>
+                                <div class="text-[10px] text-slate-400 flex justify-between"><span>Throughput:</span> <span class="text-white">840 ops/m</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Agent Node 3 -->
+                        <div class="bg-cyberDark p-4 rounded-2xl border border-slate-800/80 flex items-start space-x-3.5 group hover:border-slate-700 transition">
+                            <div class="bg-neonGreen/10 border border-neonGreen/30 text-neonGreen p-3 rounded-xl"><i class="fa-solid fa-filter text-base"></i></div>
+                            <div class="flex-1 font-mono text-xs">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-slate-200 font-bold font-sans">TokenOptim_Matrix</span>
+                                    <span class="text-[9px] bg-neonCyan/10 text-neonCyan px-2 py-0.5 rounded-full">IDLE LOGS</span>
+                                </div>
+                                <p class="text-slate-500 text-[11px] mb-2">Compressing system prompts by stripping redundancy from raw user instructions matrices.</p>
+                                <div class="text-[10px] text-slate-400 flex justify-between"><span>Compression Rate:</span> <span class="text-neonGreen">31.4% saved</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Agent Node 4 -->
+                        <div class="bg-cyberDark p-4 rounded-2xl border border-slate-800/80 flex items-start space-x-3.5 group hover:border-slate-700 transition">
+                            <div class="bg-neonRuby/10 border border-neonRuby/30 text-neonRuby p-3 rounded-xl"><i class="fa-solid fa-triangle-exclamation text-base"></i></div>
+                            <div class="flex-1 font-mono text-xs">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-slate-200 font-bold font-sans">CostSentry_Alert</span>
+                                    <span class="text-[9px] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full">THROTTLED</span>
+                                </div>
+                                <p class="text-slate-500 text-[11px] mb-2">Monitoring API budget metrics dynamically across multi-model inference routers.</p>
+                                <div class="text-[10px] text-slate-400 flex justify-between"><span>Current Spend:</span> <span class="text-amber-500">$0.14 / min</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer Summary Info Layer Inside Cluster Box -->
+                <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-mono text-slate-500">
+                    <div>System Health Array: <span class="text-neonGreen font-bold">100% OPERATIONAL</span></div>
+                    <div class="flex space-x-4">
