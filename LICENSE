@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ni<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -268,3 +268,115 @@
                 <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs font-mono text-slate-500">
                     <div>System Health Array: <span class="text-neonGreen font-bold">100% OPERATIONAL</span></div>
                     <div class="flex space-x-4">
+    <!-- ========================================================= -->
+    <!-- SECTION 11: ENTERPRISE API CREDENTIALS MANAGER (PART 4)   -->
+    <!-- ========================================================= -->
+    <section id="api-manager" class="max-w-[1700px] mx-auto px-6 py-12">
+        <div class="bg-cyberDeep border border-slate-800 rounded-3xl p-8 shadow-xl">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-800 pb-6 mb-6 gap-4">
+                <div>
+                    <h3 class="text-lg font-bold text-white tracking-wide flex items-center">
+                        <i class="fa-solid fa-key text-neonCyan mr-2.5"></i> Production Gateway API Key Credentials
+                    </h3>
+                    <p class="text-xs text-slate-400">Generate, revoke, and monitor secret gateway tokens for streaming prompt contexts directly to external environments.</p>
+                </div>
+                <button class="bg-gradient-to-r from-neonCyan via-blue-600 to-indigo-600 text-white font-extrabold text-xs px-5 py-3 rounded-xl shadow-glow-cyan uppercase tracking-wider transition hover:opacity-90">
+                    <i class="fa-solid fa-plus-circle mr-2"></i> Provision New API Token Node
+                </button>
+            </div>
+
+            <!-- Credentials Tokens Detailed List Layout Grid -->
+            <div class="space-y-4 font-mono text-xs">
+                <!-- Key Card 1 -->
+                <div class="bg-cyberDark p-5 rounded-2xl border border-slate-800/80 flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:border-slate-700 transition">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-neonCyan/10 border border-neonCyan/20 text-neonCyan p-3 rounded-xl"><i class="fa-solid fa-network-wired text-sm"></i></div>
+                        <div>
+                            <span class="text-slate-200 font-bold font-sans text-sm block">Live_Production_Swarm_Token</span>
+                            <span class="text-[11px] text-slate-500 font-mono tracking-wide block mt-0.5">atm_live_891x902_u8a23bc11059f3e...</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-[11px]">
+                        <div><span class="text-slate-500 block uppercase text-[9px] tracking-wider">Access Scope</span><span class="text-slate-300">Read/Write/Execute</span></div>
+                        <div><span class="text-slate-500 block uppercase text-[9px] tracking-wider">Monthly Request Cap</span><span class="text-neonCyan">14,920,100 / Unlimited</span></div>
+                        <div><span class="text-slate-500 block uppercase text-[9px] tracking-wider">Created Timestamp</span><span class="text-slate-400">2026-08-11 14:02:11</span></div>
+                        <div><span class="text-slate-500 block uppercase text-[9px] tracking-wider">Security State</span><span class="text-neonGreen font-bold flex items-center"><span class="w-1.5 h-1.5 bg-neonGreen rounded-full mr-1.5 animate-pulse"></span> SYSTEM ACTIVE</span></div>
+                    </div>
+                    <div class="flex items-center justify-end space-x-2">
+                        <button class="bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-300 p-2 rounded-xl transition" title="Copy Token"><i class="fa-regular fa-copy"></i></button>
+                        <button class="bg-slate-900 border border-slate-700 hover:border-neonRuby text-neonRuby p-2 rounded-xl transition" title="Revoke Token Access"><i class="fa-solid fa-ban"></i></button>
+                    </div>
+                </div>
+
+                <!-- Key Card 2 -->
+                <div class="bg-cyberDark p-5 rounded-2xl border border-slate-800/80 flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:border-slate-700 transition">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-neonPurple/10 border border-neonPurple/20 text-neonPurple p-3 rounded-xl"><i class="fa-solid fa-vial text-sm"></i></div>
+                        <div>
+                            <span class="text-slate-200 font-bold font-sans text-sm block">Staging_Sandbox_Testing_Key</span>
+                            <span class="text-[11px] text-slate-500 font-mono tracking-wide block mt-0.5">atm_test_102j882_a9c0201fa049e1...</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-[11px]">
+                        <div><span class="text-slate-500 block uppercase text-[9px] tracking-wider">Access Scope</span><span class="text-slate-300">Read/Write Only</span></div>
+                        <div><span class="text-slate-500 block uppercase text-[9px] tracking-wider">Monthly Request Cap</span><span class="text-neonPurple">45,102 / 100,000</span></div>
+                        <div><span class="text-slate-500 block uppercase text-[9px] tracking-wider">Created Timestamp</span><span class="text-slate-400">2026-08-28 09:15:30</span></div>
+                        <div><span class="text-slate-500 block uppercase text-[9px] tracking-wider">Security State</span><span class="text-neonGreen font-bold flex items-center"><span class="w-1.5 h-1.5 bg-neonGreen rounded-full mr-1.5 animate-pulse"></span> SYSTEM ACTIVE</span></div>
+                    </div>
+                    <div class="flex items-center justify-end space-x-2">
+                        <button class="bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-300 p-2 rounded-xl transition" title="Copy Token"><i class="fa-regular fa-copy"></i></button>
+                        <button class="bg-slate-900 border border-slate-700 hover:border-neonRuby text-neonRuby p-2 rounded-xl transition" title="Revoke Token Access"><i class="fa-solid fa-ban"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 12: MODEL PIPELINE REASONING SIMULATOR STUDIO     -->
+    <!-- ========================================================= -->
+    <section id="compiler-simulator" class="max-w-[1700px] mx-auto px-6 py-6">
+        <div class="bg-cyberDeep border border-slate-800 rounded-3xl p-8 shadow-xl">
+            <div class="mb-6">
+                <h3 class="text-lg font-bold text-white tracking-wide"><i class="fa-solid fa-microchip text-neonPurple mr-2"></i> Live Prompt Compiler Sandbox Simulator</h3>
+                <p class="text-xs text-slate-400">Test parameter variations against a simulated reasoning pipeline execution node before provisioning real-time production loops.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Parameters Config Panel Left -->
+                <div class="lg:col-span-4 bg-cyberDark p-6 rounded-2xl border border-slate-800 space-y-5 text-xs font-mono">
+                    <span class="text-white font-sans font-bold text-sm tracking-wide block uppercase border-b border-slate-800 pb-2 text-slate-300">Simulation Variables</span>
+                    
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Simulated Model Architecture</label>
+                        <select id="sim-model" class="w-full bg-cyberDeep border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-neonPurple cursor-pointer">
+                            <option value="ultra">AITECH-Neural-100B-Ultra</option>
+                            <option value="sonnet">Claude-3.7-Sonnet</option>
+                            <option value="gpt5">GPT-5-Inference-Engine</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Context Injection Method</label>
+                        <select class="w-full bg-cyberDeep border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-neonPurple cursor-pointer">
+                            <option>Vector Dense Chunk Insertion (Hybrid RAG)</option>
+                            <option>Few-Shot In-Context Training Samples</option>
+                            <option>Direct Structural Text Append System</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Inference Iteration Matrix</label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button class="bg-slate-900 border border-neonPurple px-3 py-2.5 rounded-xl text-center text-white font-bold">1x Loop</button>
+                            <button class="bg-slate-900 border border-slate-800 px-3 py-2.5 rounded-xl text-center text-slate-400 hover:border-slate-600 transition">4x Tree</button>
+                            <button class="bg-slate-900 border border-slate-800 px-3 py-2.5 rounded-xl text-center text-slate-400 hover:border-slate-600 transition">16x Swarm</button>
+                        </div>
+                    </div>
+
+                    <button id="btn-compile" class="w-full mt-4 bg-gradient-to-r from-neonPurple to-indigo-600 text-white font-extrabold py-3.5 rounded-xl shadow-glow-purple uppercase tracking-wider text-xs transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-gears mr-1.5 animate-spin"></i> Trigger Simulated Compile
+                    </button>
+                </div>
+
+                <!-- Simulation Output Panel Right -->
