@@ -611,3 +611,133 @@ ni<!DOCTYPE html>
                         </tr>
                         <tr class="hover:bg-slate-900/40 transition">
                             <td class="px-6 py-4 font-sans font-bold text-slate-300 flex items-center space-x-2.5">
+    <!-- ========================================================= -->
+    <!-- SECTION 21: TREE-OF-THOUGHT REASONING CANVAS ENGINE (PART 7)-->
+    <!-- ========================================================= -->
+    <section id="tot-canvas" class="max-w-[1700px] mx-auto px-6 py-12">
+        <div class="bg-cyberDeep border border-slate-800 rounded-3xl p-8 shadow-2xl">
+            <div class="flex flex-col xl:flex-row xl:items-center justify-between border-b border-slate-800 pb-6 mb-8 gap-4">
+                <div>
+                    <h3 class="text-xl font-bold text-white tracking-wide flex items-center">
+                        <i class="fa-solid fa-diagram-project text-neonCyan mr-3"></i> Tree-of-Thought (ToT) Autonomous Search Canvas
+                    </h3>
+                    <p class="text-xs text-slate-400">Visualize tree topologies, branch pruning, and state validation paths executed by multi-agent heuristic reasoning layers.</p>
+                </div>
+                <div class="flex space-x-2 font-mono text-xs">
+                    <span class="bg-neonCyan/10 border border-neonCyan/20 text-neonCyan px-3 py-1.5 rounded-xl"><i class="fa-solid fa-code-branch mr-1.5"></i> Active Thinking Paths: 03 / 16 Bounded</span>
+                </div>
+            </div>
+
+            <!-- Complex Branch Layout Grid System Simulator -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
+                
+                <!-- Reasoning Node Branch 1 (Pruned) -->
+                <div class="bg-cyberDark border border-neonRuby/40 rounded-2xl p-6 relative group transition bg-gradient-to-br from-cyberDark to-neonRuby/5">
+                    <div class="absolute -top-3 left-6 bg-neonRuby/10 border border-neonRuby/30 text-neonRuby font-mono text-[9px] px-2.5 py-0.5 rounded-full uppercase tracking-wider font-bold">PATH_PRUNED // REJECTED</div>
+                    <div class="flex items-center justify-between mb-4 mt-2">
+                        <h4 class="text-sm font-bold text-slate-300 font-mono">Branch_Alpha_01_Node</h4>
+                        <span class="text-xs text-neonRuby font-mono font-bold">Confidence: 14.2%</span>
+                    </div>
+                    <p class="text-xs text-slate-500 font-mono leading-relaxed mb-4">Evaluated direct text stream context append sequence. Halted due to high token leakage risk during cross-agent handshake parameters validation.</p>
+                    <div class="text-[11px] font-mono text-slate-600 bg-black/40 p-2.5 rounded-lg border border-slate-900/60 flex justify-between">
+                        <span>Heuristic Cost Score:</span> <span>0.892 Vector Overkill</span>
+                    </div>
+                </div>
+
+                <!-- Reasoning Node Branch 2 (Evaluating) -->
+                <div class="bg-cyberDark border border-amber-500/40 rounded-2xl p-6 relative group transition bg-gradient-to-br from-cyberDark to-amber-500/5">
+                    <div class="absolute -top-3 left-6 bg-amber-500/10 border border-amber-500/30 text-amber-500 font-mono text-[9px] px-2.5 py-0.5 rounded-full uppercase tracking-wider font-bold">EVALUATING // STATE_LOCK</div>
+                    <div class="flex items-center justify-between mb-4 mt-2">
+                        <h4 class="text-sm font-bold text-slate-300 font-mono">Branch_Beta_04_Node</h4>
+                        <span class="text-xs text-amber-400 font-mono font-bold">Confidence: 68.9%</span>
+                    </div>
+                    <p class="text-xs text-slate-400 font-mono leading-relaxed mb-4">Processing dense RAG document chunk embedding query injection matrices. Testing alignment vectors constraints before deployment to core node.</p>
+                    <div class="text-[11px] font-mono text-amber-400 bg-black/40 p-2.5 rounded-lg border border-slate-900/60 flex justify-between animate-pulse">
+                        <span>Iterating Synapses...</span> <span>Tree Depth: 4</span>
+                    </div>
+                </div>
+
+                <!-- Reasoning Node Branch 3 (Selected) -->
+                <div class="bg-cyberDark border border-neonGreen/40 rounded-2xl p-6 relative group transition bg-gradient-to-br from-cyberDark to-neonGreen/5">
+                    <div class="absolute -top-3 left-6 bg-neonGreen/10 border border-neonGreen/30 text-neonGreen font-mono text-[9px] px-2.5 py-0.5 rounded-full uppercase tracking-wider font-bold">PATH_SELECTED // CHOSEN</div>
+                    <div class="flex items-center justify-between mb-4 mt-2">
+                        <h4 class="text-sm font-bold text-white font-mono">Branch_Gamma_09_Node</h4>
+                        <span class="text-xs text-neonGreen font-mono font-bold">Confidence: 99.8%</span>
+                    </div>
+                    <p class="text-xs text-slate-300 font-mono leading-relaxed mb-4">Recursive reflection algorithm completed safely. Zero safety bounds violations captured. Prompt payload verified for global pipeline compilation.</p>
+                    <div class="text-[11px] font-mono text-neonGreen bg-black/40 p-2.5 rounded-lg border border-slate-900/60 flex justify-between">
+                        <span>Routing Trace Code:</span> <span>ROUTE_TX_902</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 22: HARDWARE MODEL QUANTIZATION ESTIMATOR MATRIX   -->
+    <!-- ========================================================= -->
+    <section id="quantization-estimator" class="max-w-[1700px] mx-auto px-6 py-6">
+        <div class="bg-cyberDeep border border-slate-800 rounded-3xl p-8 shadow-xl">
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-white tracking-wide"><i class="fa-solid fa-microchip text-neonPurple mr-2"></i> Model Quantization Optimization & Memory Estimator</h3>
+                <p class="text-xs text-slate-400">Calculate precision loss, parameter downscaling impacts, and VRAM bandwidth allocations across structural cluster grids dynamically.</p>
+            </div>
+
+            <!-- Heavy Structural Calculator Form Layout Grid -->
+            <div class="grid grid-cols-1 xl:grid-cols-4 gap-6 font-mono text-xs text-slate-300">
+                
+                <div class="bg-cyberDark p-5 rounded-2xl border border-slate-800 space-y-4">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Base Weight Resolution</label>
+                    <select id="quant-weight" class="w-full bg-cyberDeep border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-neonPurple cursor-pointer">
+                        <option value="16">FP16 Uncompressed Native</option>
+                        <option value="8">INT8 Precision Quantization</option>
+                        <option value="4">INT4 High-Density Sub-4bit</option>
+                    </select>
+                </div>
+
+                <div class="bg-cyberDark p-5 rounded-2xl border border-slate-800 space-y-4">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Total Model Parameters Count</label>
+                    <select id="quant-params" class="w-full bg-cyberDeep border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-neonPurple cursor-pointer">
+                        <option value="7">7 Billion (Small Node)</option>
+                        <option value="70">70 Billion (Medium Cluster)</option>
+                        <option value="405">405 Billion (Heavy Swarm Rig)</option>
+                    </select>
+                </div>
+
+                <!-- Projected Hardware Result Metrics Block 1 -->
+                <div class="bg-cyberDark p-5 rounded-2xl border border-slate-800/80 flex flex-col justify-between">
+                    <span class="text-slate-500 uppercase text-[10px] font-bold block">Required Minimum VRAM Footprint</span>
+                    <span class="text-2xl font-black text-white block mt-1" id="lbl-vram">14.00 GB</span>
+                    <span class="text-[10px] text-neonCyan mt-2"><i class="fa-solid fa-server"></i> Fits single card allocation</span>
+                </div>
+
+                <!-- Projected Hardware Result Metrics Block 2 -->
+                <div class="bg-cyberDark p-5 rounded-2xl border border-slate-800/80 flex flex-col justify-between">
+                    <span class="text-slate-500 uppercase text-[10px] font-bold block">Estimated Quality Degradation (Perplexity)</span>
+                    <span class="text-2xl font-black text-neonPurple block mt-1" id="lbl-loss">+ 0.02% Diff</span>
+                    <span class="text-[10px] text-neonGreen mt-2"><i class="fa-solid fa-circle-check"></i> High fidelity reasoning preserved</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 23: HARDWARE COMPUTATION CONTROL SCRIPTS          -->
+    <!-- ========================================================= -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const weightSel = document.getElementById("quant-weight");
+            const paramSel = document.getElementById("quant-params");
+            const lblVram = document.getElementById("lbl-vram");
+            const lblLoss = document.getElementById("lbl-loss");
+
+            function recomputeQuantizationMatrix() {
+                if(!weightSel || !paramSel || !lblVram || !lblLoss) return;
+                
+                const bits = parseInt(weightSel.value);
+                const params = parseInt(paramSel.value);
+                
+                // Base formula estimating weights memory layout footprint matrix array overhead
+                const baseGb = (params * bits) / 8 * 1.15; 
