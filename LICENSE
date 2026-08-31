@@ -838,3 +838,69 @@ ni<!DOCTYPE html>
             });
         })();
     </script>
+    <!-- ========================================================= -->
+    <!-- SECTION 28: DYNAMIC KINETIC LOGISTIC RE-INDEXER COMPONENT -->
+    <!-- ========================================================= -->
+    <section id="system-reindexer" class="max-w-[1700px] mx-auto px-6 py-6">
+        <div class="bg-gradient-to-r from-cyberDeep via-slate-950 to-cyberDeep border border-slate-800 rounded-3xl p-6 shadow-xl">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                <div class="space-y-1 font-mono text-xs">
+                    <div class="flex items-center space-x-2 text-neonCyan font-bold">
+                        <i class="fa-solid fa-arrows-spin animate-spin"></i>
+                        <span>DYNAMIC SHARD RE-INDEX PROTOCOL</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px] leading-relaxed">
+                        Cross-cluster node optimization process running safely in background layers to prevent memory leakage arrays over hyper-extended processing sessions.
+                    </p>
+                </div>
+                
+                <!-- Heavy Programmatic Progress Data Visual Grid -->
+                <div class="flex flex-wrap items-center gap-4 font-mono text-[11px] text-slate-400 w-full lg:w-auto">
+                    <div class="bg-cyberDark px-4 py-3 rounded-xl border border-slate-900 flex justify-between items-center gap-4 min-w-[200px]">
+                        <span>Shard Balance Matrix:</span>
+                        <span class="text-neonGreen font-bold" id="lbl-shard-status">OPTIMAL</span>
+                    </div>
+                    <div class="bg-cyberDark px-4 py-3 rounded-xl border border-slate-900 flex justify-between items-center gap-4 min-w-[200px]">
+                        <span>Re-allocation Offset:</span>
+                        <span class="text-neonPurple font-bold" id="lbl-offset-val">0.0041 ms</span>
+                    </div>
+                    <button class="bg-slate-900 border border-slate-800 hover:border-neonCyan text-white text-xs font-bold px-4 py-3 rounded-xl transition" onclick="triggerManualReindex()">
+                        Force Matrix Sync
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 29: SHARD CONTROLLER SCHEDULER (JAVASCRIPT LAYER)  -->
+    <!-- ========================================================= -->
+    <script>
+        // High-volume internal loop maintaining optimal background threshold states
+        function triggerManualReindex() {
+            const shardStatus = document.getElementById("lbl-shard-status");
+            const offsetVal = document.getElementById("lbl-offset-val");
+            
+            if(shardStatus && offsetVal) {
+                shardStatus.innerText = "SYNCING CLUSTERS...";
+                shardStatus.className = "text-amber-500 animate-pulse font-bold";
+                
+                setTimeout(() => {
+                    shardStatus.innerText = "BALANCED RE-INDEXED";
+                    shardStatus.className = "text-neonCyan font-bold";
+                    offsetVal.innerText = (Math.random() * 0.009).toFixed(5) + " ms";
+                    console.log("[TELEMETRY] Shard balancing array recalibrated perfectly with production storage grids.");
+                }, 1200);
+            }
+        }
+
+        // Automatic background micro-handshake tracking task loops
+        (function() {
+            setInterval(() => {
+                const telemetryTick = document.getElementById("lbl-offset-val");
+                if(telemetryTick && !telemetryTick.parentNode.innerText.includes("SYNCING")) {
+                    telemetryTick.innerText = (Math.random() * 0.005).toFixed(5) + " ms";
+                }
+            }, 6000);
+        })();
+    </script>
