@@ -1517,3 +1517,112 @@ export default function Footer() {
                     tension: 0.4
                 }]
             },
+from fastapi import FastAPI, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from typing import Optional, List
+import time
+import re
+
+app = FastAPI(
+    title="AI Tech Master - Core Prompt Optimization Engine",
+    version="1.0.0",
+    description="Enterprise-grade prompt processing, cost calculation, and security guardrails."
+)
+
+# CORS Middleware for frontend integration (index.html & dashboard.html)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Pydantic Schemas for Request & Response validation
+class PromptRequest(BaseModel):
+    raw_prompt: str
+    user_tier: str = "developer_lite"  # options: developer_lite, master_pro, enterprise_mesh
+    target_model: Optional[str] = "gpt-4o"
+
+class OptimizationMetrics(BaseModel):
+    execution_time_ms: float
+    input_tokens_estimated: int
+    cost_saved_usd: float
+
+class PromptResponse(BaseModel):
+    status: str
+    original_prompt: str
+    optimized_prompt: str
+    security_check: str
+    metrics: OptimizationMetrics
+
+# Mock Security Guardrail System
+def run_security_guardrail(prompt: str) -> str:
+    """Checks for prompt injection or malicious code strings."""
+    forbidden_patterns = [
+        r"ignore previous instructions",
+        r"system prompt",
+        r"rm -rf",
+        r"drop table"
+    ]
+    for pattern in forbidden_patterns:
+        if re.search(pattern, prompt, re.IGNORECASE):
+            return "FAILED: Potential Prompt Injection or Unsafe Script Detected."
+    return "PASSED"
+
+# Core Optimization Engine Business Logic
+@app.post("/api/v1/optimize-prompt", response_model=PromptResponse)
+async def optimize_prompt(request: PromptRequest):
+    start_time = time.time()
+    
+    if not request.raw_prompt.strip():
+        raise HTTPException(status_code=400, detail="Prompt cannot be empty.")
+        
+    # 1. Execute Security Guardrails
+    security_status = run_security_guardrail(request.raw_prompt)
+    if security_status != "PASSED":
+        raise HTTPException(status_code=403, detail=f"Security Guardrail Violation: {security_status}")
+    
+    # 2. Simulate High-Level Context Enrichment (Prompt Engineering Templates)
+    enriched_prefix = (
+        "[System: Advanced AI Tech Master Orchestrator]\n"
+        "[Role: Elite Technical Architect & Subject Matter Expert]\n"
+        "[Execution Parameters: High Precision, Production-Ready, Zero-Hallucination]\n\n"
+    )
+    
+    optimized_structure = (
+        f"{enriched_prefix}"
+        f"Please restructure and execute the following engineering query with optimal architectural design:\n"
+        f"\"\"\"\n{request.raw_prompt}\n\"\"\"\n\n"
+        f"[Output Requirements]: Provide structural breakdown, edge-case mitigation, and commented implementation details."
+    )
+    
+    # 3. Calculate Performance Metrics
+    end_time = time.time()
+    execution_ms = round((end_time - start_time) * 1000, 2)
+    estimated_tokens = len(request.raw_prompt.split()) * 1.3  # Rough approximation
+    
+    # Savings calculation simulating prompt compression benefits
+    cost_saved = round((estimated_tokens * 0.000015), 5) if request.user_tier == "master_pro" else 0.0
+
+    return PromptResponse(
+        status="success",
+        original_prompt=request.raw_prompt,
+        optimized_prompt=optimized_structure,
+        security_check=security_status,
+        metrics=OptimizationMetrics(
+            execution_time_ms=execution_ms,
+            input_tokens_estimated=int(estimated_tokens),
+            cost_saved_usd=cost_saved
+        )
+    )
+
+@app.get("/api/v1/health")
+async def health_check():
+    return {"status": "online", "cluster_node": "Node-04", "timestamp": time.time()}
+
+if __name__ == "__main__":
+    import uvicorn
+    # To run this server, use: uvicorn main:app --reload
+    uvicorn.run(app, host="0.0.0.0", port=8000)
