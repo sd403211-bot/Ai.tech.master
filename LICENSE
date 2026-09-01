@@ -1317,3 +1317,46 @@ console.log("===================================================================
 setTimeout(() => {
     generateInfiniteMatrixCode();
 }, 2000);
+import React from 'react';
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-white/5 bg-[#030712] pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h3 className="text-white font-bold mb-4 text-sm tracking-wider uppercase">Engine Features</h3>
+          <ul className="space-y-2 text-xs text-slate-400">
+            {['Hyper-Prompting', 'Neural Networks', 'Context Injection', 'API Streaming'].map(i => <li key={i} className="hover:text-white cursor-pointer">{i}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 text-sm tracking-wider uppercase">Resources</h3>
+          <ul className="space-y-2 text-xs text-slate-400">
+            {['Documentation', 'SDK Downloads', 'Open Source', 'System Status'].map(i => <li key={i} className="hover:text-white cursor-pointer">{i}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 text-sm tracking-wider uppercase">Company</h3>
+          <ul className="space-y-2 text-xs text-slate-400">
+            {['About Nexus', 'Research Lab', 'Careers', 'Security & Trust'].map(i => <li key={i} className="hover:text-white cursor-pointer">{i}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 text-sm tracking-wider uppercase">Sub-Space Telegram</h3>
+          <p className="text-xs text-slate-400 mb-4">लेटेस्ट एआई ट्रेंड्स और प्रॉम्प्ट हैक्स के लिए सब्सक्राइब करें।</p>
+          <div className="flex gap-2">
+            <input type="email" placeholder="neural-address@domain.com" className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-xs outline-none text-white w-full" />
+            <button className="bg-white text-black px-4 py-2 rounded-lg text-xs font-bold">→</button>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <span>© 2026 NEXUS.AI Inc. Quantum Encryption Enabled.</span>
+        <div className="flex gap-6">
+          <a href="#" className="hover:text-white">Privacy Policy</a>
+          <a href="#" className="hover:text-white">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  );
+}
